@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+     <style>
+        form{width: 50%;
+            padding: 10px, 20px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: darkblue;
+            text-align: center;
+            font-size: large;
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        div{
+            text-align: center;
+        }
+     </style>
+
+
+
+
+
 </head>
 <body>
-    <h1>HotelSistem</h1>
-    <h2>Acesso do cliente</h2>
-
+    <h1 style="text-align:center ;">HotelSistem</h1>
+    <h2 style="color: #333333;text-align: center;" >Acesso do cliente</h2>
+    <div>
     <form action="autenticar.php" method="post">
 
         
@@ -22,8 +46,9 @@
             <br>
             <input type="password" id="senha" name="senha" class="input" placeholder="Digite sua senha">
             <br><br>
-
+             
+            <button>Entrar</button>
     </form>
-    
+    </div>
 </body>
 </html>
