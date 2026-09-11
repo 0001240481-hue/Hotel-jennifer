@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Hotel</title>
+        <link rel="stylesheet" href="css/estilo.css">
+        <style>
+               <style>
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 20%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 10%;
+            padding: 10px;
+            background-color: #4CAF50; /* ou #6f42c1 */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        </style>
+
+</head>
+<body>
+
+    <h1 style="text-align: center; color: #6f42c1;">Imperial Palace</h1>
+    <h2 style="text-align:center ;">Cadastro de Hotel</h2>
+
+    <form style="text-align:center ; action="salvar_hotel.php" method="POST">
+
+
+        <label for="nome">Nome do Hotel:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite o nome do hotel." required><br><br>
+
+        <label for="cidade">Cidade:</label><br>
+        <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade do hotel." required><br><br>
+
+        <label for="estrelas">Classificação em Estrelas (1 a 5):</label><br>
+        <input type="number" id="estrelas" name="estrelas" min="1" max="5" placeholder="" required><br><br>
+
+        <button>Cadastrar Hotel</button>
+
+    </form>
+
+    <br>
+    <a href="index.html">Voltar à página principal</a>
+
+</body>
+</html>
