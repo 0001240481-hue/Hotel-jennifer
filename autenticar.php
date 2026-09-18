@@ -1,8 +1,8 @@
 <?php
 require_once "conexao.php";
 
-$email = $_POST['email'] ?? '';
-$senha = $_POST['senha'] ?? '';
+$email = $_POST['email'];
+$senha = $_POST['senha'];
 
 $sql = "SELECT * FROM clientes WHERE email = '$email' and senha = '$senha'";
 
@@ -16,7 +16,7 @@ if (mysqli_num_rows($resultado) > 0){
     header("Location: minhas_reservas.php");
     exit();
 }else{
-    header("Location: login.html");
+    header("Location: login_cliente.html");
     exit();
 }
 ?>

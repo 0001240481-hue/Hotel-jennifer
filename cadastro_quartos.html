@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CORREÇÃO: A tag <title> não deve ter tags HTML como <h1> dentro dela -->
-    <title>Reserva de Hotéis</title>
+    <title>cdastro de quartos</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
        form {
@@ -46,33 +46,34 @@
 </head>
 <body style="background-color: rgb(161, 219, 245);">
     <!-- CORREÇÃO: Corrigido o erro de digitação de "Cadrasto" para "Cadastro" -->
-    <h2 style="text-align: center;font-size: 40px;">Cadastro de Cliente</h2>
+     <h1 style="text-align: center;color: #00040e;">Cadastro de quartos</h1>
+    
     <div>
-        <form action="salvar_cliente.php" method="post">
-            <label for="nome">Nome completo</label>
+        <form action="" method="post">
+            <label for="nome">ID do Hotel</label>
             <br>
             <!-- CORREÇÃO: Adicionado class="input" para aplicar o estilo CSS -->
-            <input type="text" id="nome" name="nome" class="input" placeholder="Digite seu nome completo">
+            <input type="text" id="nome" name="nome" class="input" placeholder="ID do Hotel">
             <br><br>
 
-            <label for="email">E-mail</label>
+            <label for="email">numero do quarto</label>
             <br>
-            <input type="email" id="email" name="email" class="input" placeholder="Digite seu E-mail">
+            <input type="email" id="email" name="email" class="input" placeholder="numero do quarto">
             <br><br>
 
-            <label for="telefone">Telefone</label>
+            <label for="telefone">Tipo de Quarto</label>
             <br>
-            <input type="tel" id="telefone" name="telefone" class="input" placeholder="Digite seu número de Telefone">
+            <input type="tel" id="telefone" name="telefone" class="input" placeholder="tipo de quarto">
             <br><br>
 
-            <label for="senha">Senha</label>
+            <label for="senha">Preço da diaria</label>
             <br>
-            <input type="password" id="senha" name="senha" class="input" placeholder="Digite sua senha">
+            <input type="number" id="senha" name="senha" class="input" placeholder="preço da diaria" step="0.01">
             <br><br>
 
             <button type="submit">Cadastrar</button>
             <br><br>
-            <a href="">Já sou cadastrado</a>
+         
         </form>
     </div>
 </body>
