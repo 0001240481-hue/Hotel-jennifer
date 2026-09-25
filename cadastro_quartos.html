@@ -49,11 +49,11 @@
      <h1 style="text-align: center;color: #00040e;">Cadastro de quartos</h1>
     
     <div>
-        <form action="" method="post">
-            <label for="ID_Hotel">ID do Hotel</label>
+        <form action="salvar_quarto.php" method="post">
+            <label for="id_hotel">ID do Hotel</label>
             <br>
             <!-- CORREÇÃO: Adicionado class="input" para aplicar o estilo CSS -->
-            <input type="number" id="ID_Hotel" name="ID_Hotel" class="input" placeholder="ID do Hotel">
+            <input type="number" id="id_hotel" name="id_hotel" class="input" placeholder="ID do Hotel">
             <br><br>
 
             <label for="numero_quarto">numero do quarto</label>
@@ -66,9 +66,9 @@
             <input type="text" id="tipo_quarto" name="tipo_quarto" class="input" placeholder="tipo de quarto">
             <br><br>
 
-            <label for="preço_diaria">Preço da diaria</label>
+            <label for="preco_diaria">Preço da diaria</label>
             <br>
-            <input type="number" id="preço_diaria" name="preço_diaria" class="input" placeholder="preço da diaria" step="0.01">
+            <input type="number" id="preco_diaria" name="preco_diaria" class="input" placeholder="preço da diaria" step="0.01">
             <br><br>
 
             <button type="submit">Cadastrar</button>
