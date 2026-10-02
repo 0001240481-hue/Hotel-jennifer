@@ -3,14 +3,14 @@
 require_once "conexao.php";
 
 // Pega o ID do hotel pela URL
-$id_hotel = isset($_GET['id_hotel']) ? intval($_GET['id_hotel']) : 0;
+$id_hotel = isset($_GET['hotel_id']) ? intval($_GET['hotel_id']) : 0;
 
 // Consulta as reservas
 $sql = "SELECT 
             reservas.id,
             clientes.nome AS nome_cliente,
             clientes.telefone,
-            quartos.numero_quarto,
+            quartos.numero,
             reservas.data_entrada,
             reservas.data_saida
         FROM reservas
@@ -18,7 +18,7 @@ $sql = "SELECT
             ON reservas.quarto_id = quartos.id
         JOIN clientes 
             ON reservas.cliente_id = clientes.id
-        WHERE quartos.id_hotel = $id_hotel";
+        WHERE quartos.hotel_id = $id_hotel";
 
 $resultado = mysqli_query($conexao, $sql);
 
@@ -41,14 +41,15 @@ if (!$resultado) {
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #aac9f9;
             margin: 0;
             padding: 30px;
         }
 
         h2 {
             text-align: center;
-            color: #333;
+            font-size: 50px;
+            color: #02092c;
         }
 
         table {
@@ -65,7 +66,7 @@ if (!$resultado) {
         }
 
         th {
-            background-color: #333;
+            background-color: #011357;
             color: white;
         }
 
@@ -82,14 +83,14 @@ if (!$resultado) {
             display: inline-block;
             padding: 10px 20px;
             margin: 5px;
-            background-color: #333;
+            background-color: #540404;
             color: white;
             text-decoration: none;
             border-radius: 5px;
         }
 
         .links a:hover {
-            background-color: #555;
+            background-color: #5e0606;
         }
     </style>
 
@@ -128,7 +129,7 @@ if (!$resultado) {
 
         ?>
 
-    </table>
+    </table><br><br>
 
     <div class="links">
 
@@ -136,7 +137,7 @@ if (!$resultado) {
             Cadastrar Novo Quarto
         </a>
 
-        <a href="index.html">
+        <a href="logout.php">
             Sair
         </a>
 

@@ -6,10 +6,11 @@ $sql = "SELECT reservas.id,
                hoteis.nome AS nome_hotel,
                quartos.tipo,
                reservas.data_entrada,
-               reservas.data_saida
+               reservas.data_saida,
+               quartos.preco_diaria
     FROM reservas
     JOIN quartos ON reservas.quarto_id = quartos.id
-    JOIN hoteis ON quartos.id_hotel = hoteis.id";
+    JOIN hoteis ON quartos.hotel_id = hoteis.id";
 
 $resultado = mysqli_query($conexao, $sql);
 ?>
@@ -23,7 +24,7 @@ $resultado = mysqli_query($conexao, $sql);
     <body>
         
          <h2>MINHAS RESERVAS CONFIRMADAS</h2>
-         <table>
+         <table border="1">
 
          <tr>
 
